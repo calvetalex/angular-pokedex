@@ -1,0 +1,15 @@
+<div>
+    <div class="error" *ngIf="this.error">
+        <p>{{this.error}}</p>
+        <button *ngIf="showBtn" type="button" (click)="redirectToList()">Go back to the list</button>
+    </div>
+    <div class="pokemon" *ngIf="pokemon">
+        <div class="card">
+            <span class="card-id">{{pokemon.id}}</span>
+            <img class="card-image" [src]="pokemon.imageSrc" [alt]="pokemon.name" />
+            <img class="card-image" [src]="pokemon.shiny" [alt]="pokemon.name" />
+            <h2 class="card-name">{{pokemon.name}}</h2>
+            <span class="card-details">{{pokemon.type}}</span>
+        </div>
+    </div>
+</div>

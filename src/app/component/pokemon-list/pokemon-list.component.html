@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="pokemon-list">
+        <ul>
+            <li *ngFor="let poke of pokemonList" (click)="onClick(poke.url)">
+                <p>Name: {{ poke.name }}</p>
+            </li>
+        </ul>
+    </div>
+    <div class="pokemon-card">
+        <app-pokemon-card [pokeUrl]="pokemonUrl"></app-pokemon-card>    
+    </div>
+</div>
